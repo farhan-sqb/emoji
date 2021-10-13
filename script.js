@@ -1,7 +1,14 @@
 // JavaScript Document
-let emoji = "129402";
+let emoji_1 = "128512";
+let emoji_2 = "8986";
 
 for(let x=0; x<100; x++){
+	let emoji = '';
+	if(emoji_1 >= "128592"){
+		emoji = emoji_2;
+	}else{
+		emoji = emoji_1;
+	}
 	//Make Div
 	let div = document.createElement('div');
 	div.setAttribute('class', 'flex-item');
@@ -21,5 +28,9 @@ for(let x=0; x<100; x++){
 	
 	document.getElementById("flex-container").appendChild(div);	
 	
-	emoji = Number(emoji)+Number(1);
+	if(emoji_1 >= "128592"){
+		emoji_2 = Number(emoji_2)+Number(1);
+	}else{
+		emoji_1 = Number(emoji_1)+Number(1);
+	}
 }
